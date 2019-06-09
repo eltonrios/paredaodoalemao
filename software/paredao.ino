@@ -138,6 +138,7 @@ void loop() {
         //detectar quando o botão esquerdo for pressionado
         if (!digitalRead(botao_esquerdo)) {  
             paredao++;
+            Serial.print(" > ");
             Serial.println(paredao);
             delay(300);
             continue;
@@ -147,6 +148,7 @@ void loop() {
         if (!digitalRead(botao_direito)) {  
             paredao++;
             circulo++;
+            Serial.print(" > ");
             Serial.print(paredao);
             Serial.println(" (+ bonus)");
             delay(300);
