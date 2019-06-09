@@ -122,7 +122,7 @@ void setup() {
 void loop() {
     // RESTART
     Serial.println("-------------------------------------------------");
-    Serial.println("           Bem vindo ao");
+    //Serial.println("           Bem vindo ao");
     Serial.println("  ...::: PAREDAO DO ALEMÃO :::... ");
     Serial.print("          (Versao ");
     Serial.print(MAJOR);
