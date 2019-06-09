@@ -220,6 +220,8 @@ void loop() {
     circulo = 0;
     bola = 0;
     total = 0;
+    total_paredao = 0;
+    total_circulo = 0;
 }  
 
 //fechamento final    
