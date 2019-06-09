@@ -1,5 +1,5 @@
 #define MAJOR 1
-#define MINOR 2
+#define MINOR 3
 #define REVISION 0
 #define botao_esquerdo 4
 #define botao_direito 2
