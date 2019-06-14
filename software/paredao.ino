@@ -99,11 +99,10 @@
 #define NOTE_CS8 4435
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
+
 #define BOLAS 7 // total de bolas em um jogo
 
 #include <EEPROM.h>
-
-static char STR[100];
 
 int paredao = 0;
 int pts_paredao = 0;
@@ -111,6 +110,8 @@ int circulo = 0;
 int bola = 0;
 int parcial[BOLAS];
 int total = 0;
+int total_paredao = 0;
+int total_circulo = 0;
 
 void setup() {
     pinMode(botao_esquerdo, INPUT_PULLUP);
@@ -138,7 +139,6 @@ void loop() {
         //detectar quando o botão esquerdo for pressionado
         if (!digitalRead(botao_esquerdo)) {  
             paredao++;
-            Serial.print(" > ");
             Serial.println(paredao);
             delay(300);
             continue;
@@ -148,7 +148,6 @@ void loop() {
         if (!digitalRead(botao_direito)) {  
             paredao++;
             circulo++;
-            Serial.print(" > ");
             Serial.print(paredao);
             Serial.println(" (+ bonus)");
             delay(300);
@@ -194,15 +193,12 @@ void loop() {
             //mostra pontuação obtida nessa bola
             parcial[bola] = pts_paredao + circulo;
             total += parcial[bola];
+            total_paredao += paredao;
+            total_circulo += circulo;
             Serial.print("Pontuacao obtida nesta bola: ");
             Serial.println(parcial[bola]);
-            //meu acrescimo
-            Serial.print("Pontuação total: ");
-            Serial.print(total);
-            Serial.println(" pts");
             Serial.println("-------------------------------------------------");
 
-            //fim
             paredao = 0;
             circulo = 0;
             pts_paredao = 0;
@@ -211,9 +207,14 @@ void loop() {
 
     //mostra pontuação total
     Serial.println("-------------------------------------------------");
-    Serial.println("             --== FIM DE JOGO ==--");
+    Serial.println("              --== FIM DO JOGO ==--");
     Serial.println("-------------------------------------------------");
-
+    Serial.print("TOTAL DE PONTOS: ");
+    Serial.println(total);
+    Serial.print("Total de acertos no paredao: ");
+    Serial.println(total_paredao);
+    Serial.print("Total de acertos no circulo: ");
+    Serial.println(total_circulo);
 
     paredao = 0;
     pts_paredao = 0;
@@ -223,5 +224,3 @@ void loop() {
     total_paredao = 0;
     total_circulo = 0;
 }  
-
-//fechamento final    
