@@ -143,7 +143,7 @@ void loop() {
             delay(300);
             continue;
         }
-
+        
         //detectar quando o botão direito for pressionado
         if (!digitalRead(botao_direito)) {  
             paredao++;
@@ -158,7 +158,6 @@ void loop() {
         //Queda de bola
         if (!digitalRead(botao_meio)) {  
             bola++;
-
             delay(300);
             tone(PIN_TONE, NOTE_C4, 100);
             delay(110);
@@ -203,6 +202,8 @@ void loop() {
             circulo = 0;
             pts_paredao = 0;
         }
+            //teste
+
     }
 
     //mostra pontuação total
