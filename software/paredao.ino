@@ -196,6 +196,8 @@ void loop() {
             total_circulo += circulo;
             Serial.print("Pontuacao obtida nesta bola: ");
             Serial.println(parcial[bola]);
+            Serial.print("TOTAL PARCIAL DE PONTOS: ");
+            Serial.println(total);
             Serial.println("-------------------------------------------------");
 
             paredao = 0;
@@ -212,10 +214,10 @@ void loop() {
     Serial.println("-------------------------------------------------");
     Serial.print("TOTAL DE PONTOS: ");
     Serial.println(total);
-    Serial.print("Total de acertos no paredao: ");
-    Serial.println(total_paredao);
-    Serial.print("Total de acertos no circulo: ");
-    Serial.println(total_circulo);
+    //Serial.print("Total de acertos no paredao: ");
+    //Serial.println(total_paredao);
+    //Serial.print("Total de acertos no circulo: ");
+    //Serial.println(total_circulo);
 
     paredao = 0;
     pts_paredao = 0;
