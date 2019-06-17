@@ -1,6 +1,6 @@
 #define MAJOR 1
 #define MINOR 3
-#define REVISION 0
+#define REVISION 2
 #define botao_esquerdo 4
 #define botao_direito 2
 #define botao_meio 3
@@ -226,4 +226,4 @@ void loop() {
     total = 0;
     total_paredao = 0;
     total_circulo = 0;
-}  
+}
