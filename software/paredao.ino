@@ -177,7 +177,7 @@ void loop() {
             Serial.println(paredao);
 
             //mostra acertos no círculo
-            Serial.print("Acertos no círculo: ");
+            Serial.print("Acertos no círculo: ");l
             Serial.println(circulo);
 
             //mostra pontos paredão
@@ -199,7 +199,44 @@ void loop() {
             Serial.print("TOTAL PARCIAL DE PONTOS: ");
             Serial.println(total);
             Serial.println("-------------------------------------------------");
-
+            
+            //Guarda placar por bola
+            if (bola=1) {
+                   paredao1=paredao
+                   circulo1=circulo
+                   pts_paredao1=pts_paredao
+              }
+             else if (bola=2) {
+                   paredao2=paredao
+                   circulo2=circulo
+                   pts_paredao2=pts_paredao
+              else if (bola=3) então 
+                   paredao3=paredao
+                   circulo3=circulo
+                   pts_paredao3=pts_paredao
+               }
+              else if (bola=4) {
+                   paredao4=paredao
+                   circulo4=circulo
+                   pts_paredao4=pts_paredao 
+               } 
+              else if (bola=5) {
+                   paredao5=paredao
+                   circulo5=circulo
+                   pts_paredao5=pts_paredao  
+              }                 
+             else if (bola=6) {
+                   paredao6=paredao
+                   circulo6=circulo
+                   pts_paredao6=pts_paredao
+              }
+             else if (bola=7) {
+                   paredao7=paredao
+                   circulo7=circulo
+                   pts_paredao7=pts_paredao
+              }
+         
+            //Zera placar
             paredao = 0;
             circulo = 0;
             pts_paredao = 0;
@@ -211,6 +248,58 @@ void loop() {
     //mostra pontuação total
     Serial.println("-------------------------------------------------");
     Serial.println("              --== FIM DO JOGO ==--");
+    Serial.println("-------------------------------------------------");
+    
+    //Imprime relatorio sequencias
+    Serial.println("SEQUÊNCIA 1");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao1);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao1);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo1);
+    Serial.println("SEQUÊNCIA 2");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao2);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao2);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo2);
+    Serial.println("SEQUÊNCIA 3");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao3);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao3);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo3);
+    Serial.println("SEQUÊNCIA 4");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao4);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao4);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo4);
+    Serial.println("SEQUÊNCIA 5");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao5);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao5);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo5);
+    Serial.println("SEQUÊNCIA 6");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao6);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao6);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo6);
+    Serial.println("SEQUÊNCIA 7");
+    Serial.print("Acertos paredao: ");
+    Serial.print(paredao7);
+    Serial.print("Pts Paredao: ");
+    Serial.println(pts_paredao7);
+    Serial.print("Pts Circulo: ");
+    Serial.println(circulo7);
     Serial.println("-------------------------------------------------");
     Serial.print("TOTAL DE PONTOS: ");
     Serial.println(total);
